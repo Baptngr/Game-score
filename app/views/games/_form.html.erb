@@ -1,62 +1,50 @@
-<%= simple_form_for(@game, html: { class: 'form-horizontal' }) do |f| %>
+<%= simple_form_for(@game, html: { class: 'form-horizontal container py-4 px-5 bg-light rounded shadow-sm' }) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <div class="form-group">
-      <%= f.label :score_home, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <%= f.label :score_home, class: 'control-label' %>
         <%= f.input :score_home, label: false, input_html: { class: 'form-control' } %>
       </div>
-    </div>
 
-    <div class="form-group">
-      <%= f.label :score_away, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
+      <div class="col-md-6">
+        <%= f.label :score_away, class: 'control-label' %>
         <%= f.input :score_away, label: false, input_html: { class: 'form-control' } %>
       </div>
     </div>
 
-    <div class="form-group">
-      <%= f.label :description, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
-        <%= f.input :description, label: false, input_html: { class: 'form-control' } %>
-      </div>
+    <div class="mb-4">
+      <%= f.label :description, class: 'control-label' %>
+      <%= f.input :description, label: false, input_html: { class: 'form-control' } %>
     </div>
 
-    <div class="form-group">
-      <%= f.label :date, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
-        <%= f.input :date, label: false, input_html: { class: 'form-control' } %>
-      </div>
+    <div class="mb-4">
+      <%= f.label :date, class: 'control-label' %>
+      <%= f.input :date, label: false, input_html: { class: 'form-control' } %>
     </div>
 
-    <div class="form-group">
-      <%= f.label :team_away_id, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <%= f.label :team_away_id, class: 'control-label' %>
         <%= f.association :team_away, label: false, input_html: { class: 'form-control' } %>
       </div>
-    </div>
 
-    <div class="form-group">
-      <%= f.label :team_home_id, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
+      <div class="col-md-6">
+        <%= f.label :team_home_id, class: 'control-label' %>
         <%= f.association :team_home, label: false, input_html: { class: 'form-control' } %>
       </div>
     </div>
 
-    <div class="form-group">
-      <%= f.label :day_id, class: 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
-        <%= f.association :day, label: false, input_html: { class: 'form-control' } %>
-      </div>
+    <div class="mb-4">
+      <%= f.label :day_id, class: 'control-label' %>
+      <%= f.association :day, label: false, input_html: { class: 'form-control' } %>
     </div>
   </div>
 
-  <div class="form-actions">
-    <div class="col-sm-offset-2 col-sm-10">
-      <%= f.button :submit, class: 'btn btn-primary' %>
-      <%= link_to "Voir les teams", teams_path, class: 'btn btn-default' %>
-    </div>
+  <div class="form-actions text-center">
+    <%= f.button :submit, class: 'btn btn-primary px-4 py-2' %>
+    <%= link_to "Voir les teams", teams_path, class: 'btn btn-outline-secondary px-4 py-2' %>
   </div>
 <% end %>
