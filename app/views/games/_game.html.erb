@@ -10,28 +10,28 @@
           <span class="badge bg-primary"><%= game.score_home %></span>
         </p>
       </div>
-      <div class="row">
       <div class="col-md-6">
         <p class="mb-2">
           <strong>Team Home:</strong>
           <span class="text-info"><%= game.team_home %></span>
         </p>
       </div>
+    </div>
+
+    <div class="row mt-2">
       <div class="col-md-6">
         <p class="mb-2">
           <strong>Score Away:</strong>
           <span class="badge bg-danger"><%= game.score_away %></span>
         </p>
       </div>
-    </div>
-    <div class="col-md-6">
+      <div class="col-md-6">
         <p class="mb-2">
           <strong>Team Away:</strong>
-          <span class="text-warning"><%= game.team_away%></span>
+          <span class="text-warning"><%= game.team_away %></span>
         </p>
       </div>
     </div>
-
 
     <p class="mb-2">
       <strong>Description:</strong>
@@ -43,19 +43,13 @@
       <span class="text-muted"><%= game.date %></span>
     </p>
 
-    
-
-
-
-
-      
     <p class="mb-0">
       <strong>Day:</strong>
       <span class="text-muted"><%= game.day %></span>
     </p>
   </div>
-  <div>
-  <%= link_to "Voir les team", teams_path %>
-</div>
 
+  <div class="card-footer text-center">
+    <%= link_to "Voir les teams", teams_path, class: "btn btn-outline-primary" %>
+  </div>
 </div>
