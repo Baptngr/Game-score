@@ -61,3 +61,5 @@ end
 
 gem "simple_form", "~> 5.3"
 ruby "3.4.1"
+gem "dartsass-rails"
+gem "bootstrap", "~> 5.3.3"
