@@ -1,37 +1,51 @@
-<div id="<%= dom_id game %>">
-  <p>
-    <strong>Score home:</strong>
-    <%= game.score_home %>
-  </p>
+<div id="<%= dom_id game %>" class="card shadow-sm mb-4">
+  <div class="card-body">
+    <h5 class="card-title">Match Details</h5>
+    <hr>
 
-  <p>
-    <strong>Score away:</strong>
-    <%= game.score_away %>
-  </p>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-2">
+          <strong>Score Home:</strong>
+          <span class="badge bg-primary"><%= game.score_home %></span>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p class="mb-2">
+          <strong>Score Away:</strong>
+          <span class="badge bg-danger"><%= game.score_away %></span>
+        </p>
+      </div>
+    </div>
 
-  <p>
-    <strong>Description:</strong>
-    <%= game.description %>
-  </p>
+    <p class="mb-2">
+      <strong>Description:</strong>
+      <span class="text-muted"><%= game.description %></span>
+    </p>
 
-  <p>
-    <strong>Date:</strong>
-    <%= game.date %>
-  </p>
+    <p class="mb-2">
+      <strong>Date:</strong>
+      <span class="text-muted"><%= game.date %></span>
+    </p>
 
-  <p>
-    <strong>Team away:</strong>
-    <%= game.team_away_id %>
-  </p>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-2">
+          <strong>Team Home:</strong>
+          <span class="text-info"><%= game.team_home %></span>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p class="mb-2">
+          <strong>Team Away:</strong>
+          <span class="text-warning"><%= game.team_away%></span>
+        </p>
+      </div>
+    </div>
 
-  <p>
-    <strong>Team home:</strong>
-    <%= game.team_home_id %>
-  </p>
-
-  <p>
-    <strong>Day:</strong>
-    <%= game.day_id %>
-  </p>
-
+    <p class="mb-0">
+      <strong>Day:</strong>
+      <span class="text-muted"><%= game.day %></span>
+    </p>
+  </div>
 </div>
