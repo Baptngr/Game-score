@@ -1,16 +1,28 @@
-<p style="color: green"><%= notice %></p>
+<% if notice.present? %>
+  <div class="alert alert-success text-center">
+    <%= notice %>
+  </div>
+<% end %>
 
 <% content_for :title, "Teams" %>
 
-<h1>Teams</h1>
+<div class="container mt-4">
+  <h1 class="text-center mb-4 text-primary">Teams</h1>
 
-<div id="teams">
-  <% @teams.each do |team| %>
-    <%= render team %>
-    <p>
-      <%= link_to "Show this team", team %>
-    </p>
-  <% end %>
+  <div class="row">
+    <% @teams.each do |team| %>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm border-0">
+          <div class="card-body text-center">
+            <%= render team %>
+            <a href="<%= team_path(team) %>" class="btn btn-outline-primary mt-2">Show this team</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="text-center mt-4">
+    <%= link_to "New Team", new_team_path, class: "btn btn-primary px-4 py-2" %>
+  </div>
 </div>
-
-<%= link_to "New team", new_team_path %>
