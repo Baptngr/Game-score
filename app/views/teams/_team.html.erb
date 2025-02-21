@@ -1,12 +1,9 @@
-<div id="<%= dom_id team %>">
-  <p>
-    <strong>Logo:</strong>
-    <%= image_tag team.logo %>
-  </p>
+<div id="<%= dom_id team %>" class="card shadow-sm border-0 p-4 text-center bg-light">
+  <div class="card-body">
+    <div class="mb-3">
+      <%= image_tag team.logo, class: "img-fluid rounded-circle shadow", alt: "Logo de #{team.name}", style: "max-width: 100px;" %>
+    </div>
 
-  <p>
-    <strong>Name:</strong>
-    <%= team.name %>
-  </p>
-
+    <h5 class="fw-bold text-primary"><%= team.name %></h5>
+  </div>
 </div>
