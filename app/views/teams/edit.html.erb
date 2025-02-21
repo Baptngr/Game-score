@@ -1,12 +1,16 @@
-<% content_for :title, "Editing team" %>
+<% content_for :title, "Editing Team" %>
 
-<h1>Editing team</h1>
+<div class="container mt-4">
+  <h1 class="text-center text-warning mb-4">Editing Team</h1>
 
-<%= render "form", team: @team %>
+  <div class="card shadow-sm border-0 p-4">
+    <div class="card-body">
+      <%= render "form", team: @team %>
+    </div>
+  </div>
 
-<br>
-
-<div>
-  <%= link_to "Show this team", @team %> |
-  <%= link_to "Back to teams", teams_path %>
+  <div class="text-center mt-4">
+    <%= link_to "Show this Team", @team, class: "btn btn-outline-primary px-4 py-2" %>
+    <%= link_to "Back to Teams", teams_path, class: "btn btn-outline-secondary px-4 py-2 ms-2" %>
+  </div>
 </div>
