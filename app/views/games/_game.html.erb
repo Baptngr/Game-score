@@ -10,6 +10,13 @@
           <span class="badge bg-primary"><%= game.score_home %></span>
         </p>
       </div>
+      <div class="row">
+      <div class="col-md-6">
+        <p class="mb-2">
+          <strong>Team Home:</strong>
+          <span class="text-info"><%= game.team_home %></span>
+        </p>
+      </div>
       <div class="col-md-6">
         <p class="mb-2">
           <strong>Score Away:</strong>
@@ -17,6 +24,14 @@
         </p>
       </div>
     </div>
+    <div class="col-md-6">
+        <p class="mb-2">
+          <strong>Team Away:</strong>
+          <span class="text-warning"><%= game.team_away%></span>
+        </p>
+      </div>
+    </div>
+
 
     <p class="mb-2">
       <strong>Description:</strong>
@@ -28,21 +43,12 @@
       <span class="text-muted"><%= game.date %></span>
     </p>
 
-    <div class="row">
-      <div class="col-md-6">
-        <p class="mb-2">
-          <strong>Team Home:</strong>
-          <span class="text-info"><%= game.team_home %></span>
-        </p>
-      </div>
-      <div class="col-md-6">
-        <p class="mb-2">
-          <strong>Team Away:</strong>
-          <span class="text-warning"><%= game.team_away%></span>
-        </p>
-      </div>
-    </div>
+    
 
+
+
+
+      
     <p class="mb-0">
       <strong>Day:</strong>
       <span class="text-muted"><%= game.day %></span>
